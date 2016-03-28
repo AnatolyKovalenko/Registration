@@ -1,0 +1,85 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <dl class="dl-horizontal">
+    <dt>Login:</dt>
+    <dd>{{user.login}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Email:</dt>
+    <dd>{{user.email}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Password:</dt>
+    <dd>{{user.password}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Confirm password:</dt>
+    <dd>{{user.confirmPassword}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Name:</dt>
+    <dd>{{user.name}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Surname:</dt>
+    <dd>{{user.surname}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Birthday:</dt>
+    <dd>{{user.birthday | date:'dd-MM-yyyy'}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Sex:</dt>
+    <dd>{{user.sex}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Additional information:</dt>
+    <dd>{{user.additionalInformation}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Phone number:</dt>
+    <dd>{{user.phoneNumber | PhoneNumberFilter}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Country:</dt>
+    <dd>{{user.country}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>City:</dt>
+    <dd>{{user.city}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Address:</dt>
+    <dd>{{user.address}}</dd>
+    <dd>{{user.additionalAddress}}</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <dt>Social networks:</dt>
+    <dd>{{user.vkId}}</dd>
+    <dd>{{user.fbId}}</dd>
+    <dd>{{user.twId}}</dd>
+    <dd>{{user.instId}}</dd>
+    <dd>{{user.gpId}}</dd>
+  </dl>
+
+  <div class="col-xs-6 col-xs-offset-3">
+    <button type="button" class="btn btn-block btn-success" ng-click="sendInfo()">
+      Confirmation
+      <span class="glyphicon glyphicon-ok"></span>
+    </button>
+  </div>
+
+</div>
+

@@ -1,0 +1,133 @@
+html, body {
+	height: 100%;
+	background: url(../img/black_triangle.png) repeat;  
+}
+dl, label, .page-header h2{
+	color: #fff;
+}
+.radio.indent, p.indent{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.warning{
+	color: #fff;
+  position: absolute;
+  font-size: 11px;
+  padding-left: 12px;
+}
+#global {
+  position: relative;
+  top: 30px;
+}
+#form-container { 
+	background:#2f2f2f; 
+  border-radius:5px; 
+}
+#form-container .page-header {
+	background:#151515; 
+	margin:0;
+	padding:25px; 
+	border-bottom: none;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px; 
+}
+#status-buttons{
+	padding-top: 10px;
+}
+#status-buttons p { 
+	color:#fff; 
+	display:inline-block; 
+	font-size:12px; 
+	margin-right:25px; 
+	text-align:center; 
+	text-transform:uppercase; 
+}
+#status-buttons span {
+	background:#2f2f2f;
+	font-size: 16px; 
+	display:block; 
+	height:40px;
+	width:40px; 
+	margin:0 auto 10px; 
+	padding-top:10px; 
+  border-radius:50%; 
+}
+#status-buttons p.active span { 
+	background:#5bc0de; 
+}
+.visited {
+	background-color: #5cb85c !important;
+}
+#signup-form { 
+	position:relative; 
+	min-height:724px; 
+	overflow:hidden; 
+	padding:20px 30px; 
+}
+#form-view.ng-enter,
+#form-view.ng-leave { 
+	position:absolute; left:30px; right:30px;
+  transition:0.5s all ease; 
+  -moz-transition:0.5s all ease; 
+  -webkit-transition:0.5s all ease; 
+}
+#form-view.ng-enter { 
+  -webkit-animation:slideInUp 1s both ease;
+	-moz-animation:slideInUp 1s both ease;
+	animation:slideInUp 1s both ease; 
+}
+#form-view.ng-leave {
+	-webkit-animation:slideOutDown 1s both ease;
+	-moz-animation:slideOutDown 1s both ease;
+	animation:slideOutDown 1s both ease;   
+}
+@keyframes slideInUp {
+	from  { transform:translateY(-200%); }
+	to  { transform: translateY(0); }
+}
+@-moz-keyframes slideInUp {
+	from 	{ -moz-transform:translateY(-200%); }
+	to  { -moz-transform: translateY(0); }
+}
+@-webkit-keyframes slideInUp {
+	from  { -webkit-transform:translateY(-200%); }
+	to  { -webkit-transform: translateY(0); }
+}
+@keyframes slideOutDown {
+	from { transform:translateY(0); }
+	to { transform: translateY(200%); }
+}
+@-moz-keyframes slideOutDown { 
+	from { transform:translateY(0); } 
+	to { -moz-transform: translateY(200%); }
+}
+@-webkit-keyframes slideOutDown {
+	from  { transform:translateY(0); }
+	to { -webkit-transform: translateY(200%); }
+}
+.form-actions {
+	margin-top: 30px;
+}
+.form-control.ng-valid {
+  background: #5cb85c;
+  color: #fff;
+  border: 1px solid #5cb85c;
+}
+.form-control.ng-dirty.ng-invalid {
+	background:#fe2e2e;
+	color: #fff;
+  border: 1px solid #fe2e2e;
+}
+.form-control.ng-valid::-webkit-input-placeholder { 
+	color: #fff; 
+}
+.form-control.ng-dirty.ng-invalid::-webkit-input-placeholder {
+	color: #fff;
+}
+.form-control.ng-valid::-moz-placeholder{
+	color: #fff;
+}
+.form-control.ng-dirty.ng-invalid::-moz-placeholder{
+	color: #fff;
+}
+

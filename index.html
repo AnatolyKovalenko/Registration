@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8"/>
+  <title>App</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css"/>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+</head>
+<body>
+
+<div class="container" id="global">
+  <div ui-view></div>
+</div>
+
+  <!-- Angular.js core JavaScript-->
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <!-- App -->
+  <script src="app.js"></script>
+  <script src="router.js"></script>
+
+  <!-- Ctrls -->
+  <script src="form/authorization/authorizationCtrl.js"></script>
+  <script src="form/personal_info/personalInfoCtrl.js"></script>
+  <script src="form/contact_info/contactInfoCtrl.js"></script>
+  <script src="form/sending_data/sendingDataCtrl.js"></script>
+
+  <!-- Services -->
+  <script src="form/services_and_filters/formService.js"></script>
+
+  <!-- Filters -->
+  <script src="form/services_and_filters/filterPhoneNumber.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,107 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <form name="personalInfoForm" ng-submit="personalInfoFormSubmit(user)">
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        name="name"
+        ng-model="user.name"
+        placeholder="Enter your name" required>
+      <span  
+        class="warning"
+        ng-show="personalInfoForm.$dirty && personalInfoForm.name.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Surname:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        name="surname"
+        ng-model="user.surname"
+        placeholder="Enter your surname" required>
+      <span  
+        class="warning"
+        ng-show="personalInfoForm.$dirty && personalInfoForm.surname.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="birthday">Birthday:</label>
+      <p class="input-group indent">
+        <input 
+          type="text" 
+          class="form-control"
+          name="birthday"
+          placeholder="Enter your birthday" 
+          uib-datepicker-popup="{{format}}" 
+          ng-model="user.birthday" 
+          is-open="popup.opened" 
+          close-text="Close" 
+          required/>
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="openPopup()">
+            <i class="glyphicon glyphicon-calendar"></i>
+          </button>
+        </span>
+      </p>
+      <span
+        class="warning"
+        ng-show="personalInfoForm.$dirty && personalInfoForm.birthday.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">
+    <label for="sex">Sex:</label>
+      <div class="radio indent">
+        <label class="checkbox-inline">
+          <input type="radio" name="sex" ng-model="user.sex" value="male"required>
+          male
+        </label>
+        <label class="checkbox-inline"> 
+          <input type="radio" name="sex" ng-model="user.sex" value="female"required>
+          female
+        </label>
+      </div>
+      <span  
+        class="warning"
+        ng-show="personalInfoForm.$dirty && personalInfoForm.sex.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+     <div class="form-group">
+      <label for="additionalInformation">Additional information:</label>
+      <textarea
+        rows="3"
+        class="form-control" 
+        ng-model="user.additionalInformation"
+        name="additionalInformation"
+        ng-maxlength="512"
+        placeholder="Enter your additional information">
+      </textarea>
+      <span class="warning">
+        Сharacters left: {{512 - user.additionalInformation.length}}
+      </span>
+    </div>
+
+    <div class="form-actions row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <button 
+          type="submit"
+          class="btn btn-block btn-info"
+          ng-disabled="personalInfoForm.$invalid"> 
+          Next Step 
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>

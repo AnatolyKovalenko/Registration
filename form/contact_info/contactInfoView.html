@@ -1,0 +1,145 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <form name="contactInfoForm" ng-submit="contactInfoFormSubmit(user)"> 
+  
+    <div class="form-group">
+      <label for="phonenumber">Phone number:</label> 
+      <phonenumber-directive
+        name="phonenumber"
+        model='user.phoneNumber'>
+      </phonenumber-directive>
+      <span  
+        class="warning"
+        ng-show="contactInfoForm.$dirty && contactInfoForm.phonenumber.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">  
+      <label for="country">Country:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        name="country"
+        ng-model="user.country"
+        placeholder="Enter your country" required>
+      <span  
+        class="warning"
+        ng-show="contactInfoForm.$dirty && contactInfoForm.country.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input 
+        type="text"   
+        class="form-control" 
+        name="city"
+        ng-model="user.city"
+        placeholder="Enter your city" required>
+      <span  
+        class="warning"
+        ng-show="contactInfoForm.$dirty && contactInfoForm.city.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        name="address"  
+        ng-model="user.address"
+        placeholder="Enter your address" required>
+      <span  
+        class="warning"
+        ng-show="contactInfoForm.$dirty && contactInfoForm.address.$error.required">
+        This is a required field
+      </span>
+    </div>
+
+    <div class="form-group">
+      <input 
+        type="text" 
+        class="form-control" 
+        name="additionalAddress"
+        ng-model="user.additionalAddress"
+        ng-disabled="!(user.address)">
+    </div>
+
+    <div class="form-group">
+      <label for="socialNetworks">Social networks:</label>
+      <div class="input-group">
+        <span class="input-group-addon">https://vk.com/</span>
+        <input 
+          type="text" 
+          class="form-control"
+          name="vkontakteId"
+          ng-model="user.vkId"
+          placeholder="Enter your vkontakte id">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">https://www.facebook.com/</span>
+        <input 
+          type="text" 
+          class="form-control"
+          name="facebookId"
+          ng-model="user.fbId"
+          placeholder="Enter your facebook id">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">https://twitter.com/</span>
+        <input 
+          type="text" 
+          class="form-control"
+          name="twitterId"
+          ng-model="user.twId"
+          placeholder="Enter your twitter id">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">https://www.instagram.com/</span>
+        <input 
+          type="text" 
+          class="form-control"
+          name="instId"
+          ng-model="user.instId"
+          placeholder="Enter your instagram id">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">https://plus.google.com/</span>
+        <input 
+          type="text" 
+          class="form-control"
+          name="gpId"
+          ng-model="user.gpId"
+          placeholder="Enter your google+ id">
+      </div>
+    </div>
+    
+    <div class="form-actions row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <button 
+          type="submit"
+          class="btn btn-block btn-info"
+          ng-disabled="contactInfoForm.$invalid"> 
+          Next Step 
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>

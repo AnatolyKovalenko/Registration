@@ -1,0 +1,78 @@
+<div class="col-xs-10 col-xs-offset-1">
+	<form name="authForm" ng-submit="authFormSubmit(user)">	
+
+		<div class="form-group">
+		  <label for="login">Login:</label>
+		  <input 
+		  	type="text" 
+		  	class="form-control" 
+		  	name="login"
+		  	ng-model="user.login"
+		  	placeholder="Enter your login" required>
+		  <span  
+		  	class="warning"
+		  	ng-show="authForm.$dirty && authForm.login.$error.required">
+		  	This is a required field
+		  </span>
+		</div>
+
+		<div class="form-group">
+		  <label for="email">Email:</label>
+		  <input 
+		  	type="email"
+		  	class="form-control" 
+		  	name="email" 
+		  	ng-model="user.email"
+		  	placeholder="Enter your email" required>
+		  <span 
+		    class="warning"
+		    ng-show="authForm.$dirty && authForm.email.$invalid">
+		    Make sure you entered is correct. Like: example@yourmail.com
+		  </span>
+		</div>
+
+		<div class="form-group">
+		  <label for="password">Password:</label>
+		  <input
+		  	type="password" 
+		  	class="form-control" 
+		  	name="password" 
+		  	ng-model="user.password"
+		  	placeholder="Enter your password" required>
+		  <span  
+		  	class="warning"
+		  	ng-show="authForm.$dirty && authForm.password.$error.required">
+		  	This is a required field
+		  </span>	
+		</div>
+
+		<div class="form-group">
+		  <label for="confirmPassword">Confirm password:</label>
+		  <input
+		  	type="password" 
+		  	class="form-control" 
+		  	name="confirmPassword" 
+		  	ng-model="user.confirmPassword"
+		  	ng-pattern="user.password"
+		  	placeholder="Confirm your password" required>
+		  <span  
+		  	class="warning"
+		  	ng-show="authForm.$dirty && authForm.confirmPassword.$error.required">
+		  	This is a required field
+		  </span>
+		</div>
+
+		<div class="form-actions row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<button 
+					type="submit"
+					class="btn btn-block btn-info"
+					ng-disabled="authForm.$invalid"> 
+			    Next Step 
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </button>
+			</div>
+		</div>
+
+	</form>
+</div>
