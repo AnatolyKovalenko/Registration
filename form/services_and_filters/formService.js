@@ -15,9 +15,9 @@
   };
 
   service.setPersonalInfoData = function(userData) {
-  	localStorage.setItem('isUser', JSON.stringify(userData));
+    localStorage.setItem('isUser', JSON.stringify(userData));
     $state.get('form.contact_info').data.allowed = true;
-  	$state.go('form.contact_info');
+    $state.go('form.contact_info');
   };
 
   service.setContactInfoData = function(userData) {

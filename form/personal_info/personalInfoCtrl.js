@@ -15,5 +15,4 @@ app.controller('PersonalInfoCtrl', function($scope, FormService) {
     FormService.markedCompleteStep();
     FormService.setPersonalInfoData(FormService.mergeUserData(user));
   };
-    
 }); 

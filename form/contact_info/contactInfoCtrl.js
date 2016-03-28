@@ -21,7 +21,6 @@ app
       scope.inputValue = scope.phonenumberModel;
 
       scope.$watch('inputValue', function(value) {
-  
         value = String(value);
         var number = value.replace(/[^0-9]+/g, '');
         scope.phonenumberModel = number;
@@ -30,5 +29,3 @@ app
       });
     }
   });
-
-  

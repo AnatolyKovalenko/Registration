@@ -40,5 +40,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
       data: {
         allowed: false
       }
-    });    
+    });
 });

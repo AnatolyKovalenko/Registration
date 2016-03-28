@@ -2,7 +2,7 @@ app.filter('PhoneNumberFilter', function() {
   return function (number) {
 
     if (!number) return '';
-          
+
     number = String(number);
    
     var formattedNumber = number,
